@@ -9,7 +9,8 @@ base_terrain PINE_FOREST
 /* MIDDLE */
 create_land
 {
-    terrain_type GRASS3
+    /* terrain_type GRASS3 */
+    terrain_type DIRT
     land_position 50 50
     land_percent 55
     base_size                     10
@@ -17,7 +18,6 @@ create_land
     right_border                  18
     top_border                    18
     bottom_border                 18
-    land_id                       5
 }
 
 /* LAND 1 */
@@ -70,7 +70,6 @@ create_land
     border_fuzziness                 1
 }
 
-
 <OBJECTS_GENERATION>
 /* PLAYER 1 */
 create_object VILLAGER
@@ -98,8 +97,10 @@ create_object FORAGE
   min_distance_to_players    10
   max_distance_to_players    12
   min_distance_group_placement  6
+  avoid_forest_zone 3
 }
 
+/* back gold */
 create_object GOLD
 {
   number_of_objects          7
@@ -109,8 +110,8 @@ create_object GOLD
   place_on_specific_land_id 1
   min_distance_to_players    12
   max_distance_to_players    16
-  min_distance_group_placement  7
-  max_distance_to_other_zones  7
+  min_distance_group_placement  10
+  place_on_forest_zone
 }
 create_object GOLD
 {
@@ -119,10 +120,9 @@ create_object GOLD
   set_tight_grouping
   set_gaia_object_only
   place_on_specific_land_id 1
-  min_distance_to_players    22
-  max_distance_to_players    26
-  min_distance_group_placement  7
-  max_distance_to_other_zones  7
+  min_distance_to_players    16
+  max_distance_to_players    18
+  min_distance_group_placement  10
 }
 create_object GOLD
 {
@@ -134,8 +134,9 @@ create_object GOLD
   min_distance_to_players    25
   max_distance_to_players    35
   min_distance_group_placement  7
-  max_distance_to_other_zones  7
-}
+  max_distance_to_other_zones  10
+  avoid_forest_zone 3
+} 
 
 create_object STONE
 {
@@ -147,7 +148,8 @@ create_object STONE
   min_distance_to_players    14
   max_distance_to_players    17
   min_distance_group_placement  7
-  max_distance_to_other_zones  7
+  max_distance_to_other_zones 10
+  place_on_forest_zone
 }
 create_object STONE
 {
@@ -159,7 +161,7 @@ create_object STONE
   min_distance_to_players    23
   max_distance_to_players    26
   min_distance_group_placement  7
-  max_distance_to_other_zones  7
+  avoid_forest_zone 3
 }
 
 create_object SHEEP
@@ -168,8 +170,8 @@ create_object SHEEP
    set_loose_grouping
    set_gaia_object_only
    place_on_specific_land_id 1
-   min_distance_to_players    9
-   max_distance_to_players    11
+   min_distance_to_players    1
+   max_distance_to_players    2
 } 
 create_object SHEEP
 {
@@ -180,23 +182,24 @@ create_object SHEEP
    place_on_specific_land_id 1
    min_distance_to_players    14
    max_distance_to_players    17
+   avoid_forest_zone 2
 }
 
 create_object BOAR
 {
   number_of_objects          1
-  set_loose_grouping  
+  set_loose_grouping
   set_gaia_object_only
-  place_on_specific_land_id 1
+  place_on_specific_land_id   1
   min_distance_to_players    16
   max_distance_to_players    19
 }
 
 create_object BOAR
 {
-  number_of_objects          1
+  number_of_objects           1
   set_gaia_object_only
-  place_on_specific_land_id 1
+  place_on_specific_land_id   1
   min_distance_to_players    16
   max_distance_to_players    19
 }
@@ -212,17 +215,7 @@ create_object DEER
   max_distance_to_players    17
 }
 
-create_object WOLF
-{
-  number_of_objects          3
-  set_gaia_object_only
-  place_on_specific_land_id 1
-  min_distance_group_placement 12
-  min_distance_to_players    30
-  max_distance_to_players    40
-}
-
-/* PLAYER 2 */
+/* *************************************************************** PLAYER 2 */
 create_object VILLAGER
 {
   place_on_specific_land_id 2
@@ -250,6 +243,7 @@ create_object FORAGE
   min_distance_group_placement  6
 }
 
+/* back gold */
 create_object GOLD
 {
   number_of_objects          7
@@ -259,8 +253,8 @@ create_object GOLD
   place_on_specific_land_id 2
   min_distance_to_players    12
   max_distance_to_players    16
-  min_distance_group_placement  7
-  max_distance_to_other_zones  7
+  min_distance_group_placement  10
+  place_on_forest_zone
 }
 create_object GOLD
 {
@@ -269,10 +263,9 @@ create_object GOLD
   set_tight_grouping
   set_gaia_object_only
   place_on_specific_land_id 2
-  min_distance_to_players    22
-  max_distance_to_players    26
-  min_distance_group_placement  7
-  max_distance_to_other_zones  7
+  min_distance_to_players    16
+  max_distance_to_players    18
+  min_distance_group_placement  10
 }
 create_object GOLD
 {
@@ -283,9 +276,9 @@ create_object GOLD
   place_on_specific_land_id 2
   min_distance_to_players    25
   max_distance_to_players    35
-  min_distance_group_placement  7
-  max_distance_to_other_zones  7
-}
+  min_distance_group_placement  10
+  avoid_forest_zone 3
+} 
 
 create_object STONE
 {
@@ -297,7 +290,7 @@ create_object STONE
   min_distance_to_players    14
   max_distance_to_players    17
   min_distance_group_placement  7
-  max_distance_to_other_zones  7
+  place_on_forest_zone
 }
 create_object STONE
 {
@@ -309,7 +302,7 @@ create_object STONE
   min_distance_to_players    23
   max_distance_to_players    26
   min_distance_group_placement  7
-  max_distance_to_other_zones  7
+  avoid_forest_zone 3
 }
 
 create_object SHEEP
@@ -318,8 +311,8 @@ create_object SHEEP
    set_loose_grouping
    set_gaia_object_only
    place_on_specific_land_id 2
-   min_distance_to_players    9
-   max_distance_to_players    11
+   min_distance_to_players    1
+   max_distance_to_players    2
 } 
 create_object SHEEP
 {
@@ -330,12 +323,13 @@ create_object SHEEP
    place_on_specific_land_id 2
    min_distance_to_players    14
    max_distance_to_players    17
+   avoid_forest_zone 2
 }
 
 create_object BOAR
 {
   number_of_objects          1
-  set_loose_grouping  
+  set_loose_grouping
   set_gaia_object_only
   place_on_specific_land_id 2
   min_distance_to_players    16
@@ -360,16 +354,6 @@ create_object DEER
   place_on_specific_land_id 2
   min_distance_to_players    14
   max_distance_to_players    17
-}
-
-create_object WOLF
-{
-  number_of_objects          3
-  set_gaia_object_only
-  place_on_specific_land_id 2
-  min_distance_group_placement 12
-  min_distance_to_players    30
-  max_distance_to_players    40
 }
 
 create_object HAWK
@@ -400,6 +384,7 @@ create_object WALL
   min_distance_to_players       20
   max_distance_to_players       20
   place_on_specific_land_id     3
+  actor_area                    1
 }
 
 create_object WALL
@@ -407,15 +392,16 @@ create_object WALL
   min_distance_to_players       20
   max_distance_to_players       20
   place_on_specific_land_id     4
+  actor_area                    2
 }
 
-/* NEUTRAL */
+/* **********************************************************************NEUTRAL */
 create_object RELIC 
 {
-    number_of_objects 5
-    min_distance_group_placement 15
-    place_on_specific_land_id 5
-    min_distance_to_players       20
+    number_of_objects             5
+    min_distance_group_placement  10
+    min_distance_to_players       35
+    avoid_forest_zone 5
 }
 
 create_object GOLD
@@ -425,18 +411,27 @@ create_object GOLD
   group_placement_radius     2
   set_tight_grouping
   set_gaia_object_only
-  min_distance_to_players       40
-  min_distance_group_placement  9
+  min_distance_group_placement  10
+  avoid_forest_zone 5
 }
 
 create_object STONE
 {
-  number_of_groups           1    
+  number_of_groups           2   
   number_of_objects          4
   group_variance             1
   group_placement_radius     2
   set_tight_grouping
   set_gaia_object_only
-  min_distance_to_players       40
-  min_distance_group_placement  9
+  min_distance_group_placement  10
+  avoid_forest_zone 5
+}
+
+create_object WOLF
+{
+  number_of_objects          6
+  set_gaia_object_only
+  min_distance_group_placement 10
+  min_distance_to_players    25
+  avoid_forest_zone 3
 }

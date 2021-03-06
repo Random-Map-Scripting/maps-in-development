@@ -4,12 +4,12 @@
     ai_info_map_type ARENA 0 0 0
 
 <LAND_GENERATION>
-base_terrain PINE_FOREST
+base_terrain DLC_RAINFOREST
 
 /* MIDDLE */
 create_land
 {
-    terrain_type GRASS3
+    terrain_type GRASS2
     land_position 50 50
     land_percent 55
     base_size                     10
@@ -42,6 +42,7 @@ create_land
 /* LAND 3 */
 create_land
 {
+    terrain_type GRASS2
     land_percent 0
     land_position 25 25
     assign_to_player 2
@@ -57,6 +58,7 @@ create_land
 /* LAND 4 */
 create_land 
 {
+    terrain_type GRASS2
     land_position 75 75
     assign_to_player 1
     land_id 4
@@ -120,7 +122,7 @@ create_object GOLD
   set_gaia_object_only
   place_on_specific_land_id 1
   min_distance_to_players    16
-  max_distance_to_players    18
+  max_distance_to_players    17
   min_distance_group_placement  10
 }
 create_object GOLD
@@ -263,7 +265,7 @@ create_object GOLD
   set_gaia_object_only
   place_on_specific_land_id 2
   min_distance_to_players    16
-  max_distance_to_players    18
+  max_distance_to_players    17
   min_distance_group_placement  10
 }
 create_object GOLD

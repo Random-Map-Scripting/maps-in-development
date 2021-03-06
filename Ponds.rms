@@ -484,7 +484,7 @@ create_object HAWK
 }
 
 /* FISH */
-if DESERT_MAP
+/* if DESERT_MAP
   create_object DORADO
   {
     number_of_objects                   16
@@ -499,22 +499,22 @@ if DESERT_MAP
     set_gaia_object_only
     max_distance_to_other_zones         4
   } 
-elseif ALPINE_MAP
-  create_object SALMON
+elseif ALPINE_MAP */
+  /* create_object SALMON
   {
     number_of_objects                   18
     set_scaling_to_map_size
     set_gaia_object_only
     max_distance_to_other_zones         4
-  }
+  } */
   create_object SNAPPER
   {
     number_of_objects                   10
     set_scaling_to_map_size
     set_gaia_object_only
-    max_distance_to_other_zones         4
+    max_distance_to_other_zones         4 
   } 
-else
+/* else */
   create_object DORADO
   {
     number_of_objects                   10
@@ -522,7 +522,7 @@ else
     set_gaia_object_only
     max_distance_to_other_zones         4
   }
-  create_object TUNA
+  /* create_object TUNA
   {
     number_of_objects                   9
     set_scaling_to_map_size
@@ -536,7 +536,7 @@ else
     set_gaia_object_only
     max_distance_to_other_zones         4
   } 
-endif
+endif */
 
 create_object SHORE_FISH
 {

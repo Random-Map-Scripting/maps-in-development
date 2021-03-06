@@ -3,17 +3,18 @@
 <PLAYER_SETUP>
   random_placement 
 
-/* ****************************************************** */
-<LAND_GENERATION>
-
 #const MEDITERRANEAN 20
 ai_info_map_type MEDITERRANEAN 0 0 0
+terrain_type GRASS2
 
+/* ****************************************************** */
+
+<LAND_GENERATION>
 create_player_lands
 {
   terrain_type                     DIRT
-  base_size                        15
-  land_percent                     8
+  base_size                        12
+  land_percent                     7
   border_fuzziness                 7
   left_border                      7
   right_border                     7
@@ -26,8 +27,8 @@ create_player_lands
 /* PONDS */
 create_land 
 {
-  terrain_type                     WATER 
-  land_percent                     10
+  terrain_type                     DLC_WATER5
+  land_percent                     15
   border_fuzziness                 10
   left_border                      5
   right_border                     5
@@ -40,8 +41,8 @@ create_land
 
 create_land 
 {                       
-  terrain_type                     WATER
-  land_percent                     10
+  terrain_type                     DLC_WATER5
+  land_percent                     15
   border_fuzziness                 10
   left_border                      5
   right_border                     5
@@ -55,7 +56,7 @@ create_land
 /* ************** SMALL PONDS ************ */
 create_land 
 {
-  terrain_type                     WATER 
+  terrain_type                     DLC_WATER5
   land_percent                     1
   border_fuzziness                 10
   left_border                      5
@@ -68,7 +69,7 @@ create_land
 
 create_land 
 {                       
-  terrain_type                     WATER
+  terrain_type                     DLC_WATER5
   land_percent                     1
   border_fuzziness                 10
   left_border                      5
@@ -247,7 +248,6 @@ endif
 
 /* ****************************************************** */
 <TERRAIN_GENERATION>
-
 create_terrain MED_WATER
 {
   base_terrain WATER
@@ -450,6 +450,7 @@ create_object BOAR
 create_object OAKTREE
 {
   number_of_objects             2
+  set_tight_grouping
   set_gaia_object_only
   set_place_for_every_player
   min_distance_to_players       4

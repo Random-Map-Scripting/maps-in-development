@@ -409,6 +409,7 @@ create_object GOLD
   set_tight_grouping
   set_gaia_object_only
   min_distance_group_placement  10
+  min_distance_to_players 35
   avoid_forest_zone 5
 }
 
@@ -421,6 +422,7 @@ create_object STONE
   set_tight_grouping
   set_gaia_object_only
   min_distance_group_placement  10
+  min_distance_to_players 35
   avoid_forest_zone 5
 }
 

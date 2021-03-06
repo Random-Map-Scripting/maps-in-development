@@ -1,5 +1,3 @@
-# maps-in-development
-
 ## Reverse Arena
 It's like Arena - except your walls are around the other player.
 

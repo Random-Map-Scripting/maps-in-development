@@ -1,11 +1,7 @@
-/* ************ ISLANDS ************ */
-/* 21 DEC 99 */
-
 /* Note: random_map.def is automatically included in every rms script */
 
-/* ****************************************************** */
 <PLAYER_SETUP>
-  random_placement  /* note this is only currently valid entry */
+  random_placement 
 
 /* ****************************************************** */
 <LAND_GENERATION>
@@ -13,18 +9,33 @@
 #const MEDITERRANEAN 20
 ai_info_map_type MEDITERRANEAN 0 0 0
 
-/* exp. with size -- was 40% and 7 dist rivers */
+create_player_lands
+{
+  terrain_type                     DIRT
+  base_size                        15
+  land_percent                     8
+  border_fuzziness                 7
+  left_border                      7
+  right_border                     7
+  top_border                       7
+  bottom_border                    7
+  other_zone_avoidance_distance    15
+  zone 3
+}
+
+/* PONDS */
 create_land 
 {
   terrain_type                     WATER 
   land_percent                     10
   border_fuzziness                 10
-  other_zone_avoidance_distance    7
-  zone 1
   left_border                      5
   right_border                     5
   top_border                       5
   bottom_border                    5 
+  other_zone_avoidance_distance    7
+  zone 1
+  set_avoid_player_start_areas
 }
 
 create_land 
@@ -32,40 +43,26 @@ create_land
   terrain_type                     WATER
   land_percent                     10
   border_fuzziness                 10
-  other_zone_avoidance_distance    7
-  zone 2
   left_border                      5
   right_border                     5
   top_border                       5
   bottom_border                    5 
+  other_zone_avoidance_distance    7
+  zone 2
+  set_avoid_player_start_areas
 }
 
-create_player_lands
-{
-  terrain_type                     DIRT
-  land_percent                     8
-  base_size                        9
-  left_border                      7
-  right_border                     7
-  top_border                       7
-  bottom_border                    7
-  border_fuzziness                 7
-  other_zone_avoidance_distance    9
-}
-
-/* ************** RESOURCE ISLANDS ************ */
-
+/* ************** SMALL PONDS ************ */
 create_land 
 {
   terrain_type                     WATER 
   land_percent                     1
   border_fuzziness                 10
-  other_zone_avoidance_distance    7
-  /* land_id                          20 */
   left_border                      5
   right_border                     5
   top_border                       5
   bottom_border                    5 
+  other_zone_avoidance_distance    7
   zone 3
 }
 
@@ -74,12 +71,11 @@ create_land
   terrain_type                     WATER
   land_percent                     1
   border_fuzziness                 10
-  other_zone_avoidance_distance    7
-  /* land_id                          23 */
   left_border                      5
   right_border                     5
   top_border                       5
   bottom_border                    5 
+  other_zone_avoidance_distance    7
   zone 4
 }
 
@@ -472,12 +468,12 @@ create_object OAKTREE
 create_object OAKTREE
 {
   number_of_objects             20
-  number_of_groups              2
+  number_of_groups              3
   set_gaia_object_only
   set_place_for_every_player
-  min_distance_to_players       10
-  max_distance_to_players       15
-  min_distance_group_placement  2
+  min_distance_to_players       12
+  max_distance_to_players       16
+  min_distance_group_placement  8
 }
 
 create_object HAWK

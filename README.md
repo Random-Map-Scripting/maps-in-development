@@ -15,6 +15,7 @@ It's like Arena - except your walls are around the other player.
 It's like Socratra - but boggier.
 
 👨‍🔧 To do: 
+- upload elevation changes
 
 👩‍🔬 Needs testing
 

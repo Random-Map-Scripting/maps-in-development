@@ -2,10 +2,10 @@
 It's like Arena - except your walls are around the other player.
 
 👨‍🔧 To do: 
-- move second gold inside walls
-- make a back gold?
-- fix neutral gold/stone locations
-- look at relic locations
+- ~~move second gold inside walls
+- ~~make a back gold?
+- fix neutral gold/stone locations (in progress)
+- ~~look at relic locations
 
 👩‍🔬 Needs testing
 

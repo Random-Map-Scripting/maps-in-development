@@ -9,8 +9,7 @@ base_terrain PINE_FOREST
 /* MIDDLE */
 create_land
 {
-    /* terrain_type GRASS3 */
-    terrain_type DIRT
+    terrain_type GRASS3
     land_position 50 50
     land_percent 55
     base_size                     10
@@ -384,7 +383,6 @@ create_object WALL
   min_distance_to_players       20
   max_distance_to_players       20
   place_on_specific_land_id     3
-  actor_area                    1
 }
 
 create_object WALL
@@ -392,7 +390,6 @@ create_object WALL
   min_distance_to_players       20
   max_distance_to_players       20
   place_on_specific_land_id     4
-  actor_area                    2
 }
 
 /* **********************************************************************NEUTRAL */

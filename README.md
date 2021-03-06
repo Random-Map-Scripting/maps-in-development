@@ -2,10 +2,10 @@
 It's like Arena - except your walls are around the other player.
 
 👨‍🔧 To do: 
-- move second gold inside walls
-- make a back gold?
-- fix neutral gold/stone locations
-- look at relic locations
+- ~~move second gold inside walls~~
+- ~~make back gold~~
+- ~~tweak relic spawn~~
+- tweak neutral gold/stone locations (in progress)
 
 👩‍🔬 Needs testing
 
@@ -15,6 +15,7 @@ It's like Arena - except your walls are around the other player.
 It's like Socratra - but boggier.
 
 👨‍🔧 To do: 
+- upload elevation changes
 
 👩‍🔬 Needs testing
 

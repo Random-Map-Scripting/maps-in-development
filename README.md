@@ -4,7 +4,7 @@
 It's like Arena - except your walls are around the other player.
 
 👨‍🔧 To do: 
-* move second goal inside walls
+* move second gold inside walls
 * make a back gold?
 * fix neutral gold/stone locations
 * look at relic locations

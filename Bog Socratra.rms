@@ -23,10 +23,10 @@ create_player_lands
      base_size 10
      border_fuzziness 20
      clumping_factor 20
-     left_border 25
-     right_border 25
-     top_border 25
-     bottom_border 25
+     left_border 17
+     right_border 17
+     top_border 17
+     bottom_border 17
      zone 1
 }
 
@@ -38,20 +38,21 @@ create_player_lands
      base_size 10
      border_fuzziness 20
      clumping_factor 20
-     left_border 25
-     right_border 25
-     top_border 25
-     bottom_border 25
+     left_border 17
+     right_border 17
+     top_border 17
+     bottom_border 17
      zone 1
 }
 endif
 
 /* ****************************************************** */
 <TERRAIN_GENERATION>
-create_terrain DLC_REEDSBEACH
+
+create_terrain DLC_MANGROVEFOREST
 {
   base_terrain                   LEAVES
-  spacing_to_other_terrain_types 2
+  /* spacing_to_other_terrain_types 2 */
   land_percent                   100
   number_of_clumps               100
   set_avoid_player_start_areas     
@@ -68,18 +69,20 @@ elseif POUST
   base_terrain                   DLC_MANGROVESHALLOW
 endif
   spacing_to_other_terrain_types 4
-  land_percent                   3
-  number_of_clumps               10
+  land_percent                   5
+  number_of_clumps               12
   set_avoid_player_start_areas     
   set_scale_by_groups
 }
 
 #const MOORLAND 44
 
-if SAVCA
-create_terrain MOORLAND
+#const ICE 26
+
+/* if SAVCA
+create_terrain ICE
 {
-  base_terrain                   SAVANNAH
+  base_terrain                   ICE
   land_percent                   3
   number_of_clumps               10
   set_scale_by_groups
@@ -87,16 +90,16 @@ create_terrain MOORLAND
 endif
 
 if POUST
-create_terrain DIRT
+create_terrain ICE
 {
-  base_terrain                   DIRT4
+  base_terrain                   ICE
   spacing_to_other_terrain_types 4
   land_percent                   7
   number_of_clumps               20
   set_avoid_player_start_areas     
   set_scale_by_groups
 }
-endif
+endif */
 
 <OBJECTS_GENERATION>
 create_object TOWN_CENTER
@@ -121,22 +124,6 @@ create_object SCOUT
   min_distance_to_players       7
   max_distance_to_players       9
  }
-
-create_object ROCK
-{
-   number_of_objects  9999
-   set_gaia_object_only
-   terrain_to_place_on     LEAVES
-}
-
-create_object ROCK
-{
-   number_of_objects  1
-   number_of_groups 9999
-   set_gaia_object_only
-   terrain_to_place_on     DEEP_WATER
-temp_min_distance_group_placement 7
-}
 
 if LUDIKRIS_MAP
 create_object RELIC
@@ -312,7 +299,7 @@ create_object ORANGESHRUB
   max_distance_to_players    11
 }
 
-#const DRAGONTREE 1051
+#const DRAGONTREE 1144
 
 create_object DRAGONTREE 
 {
@@ -337,7 +324,7 @@ create_object DRAGONTREE
 
 create_object STORK
 {
-   number_of_objects         4
+   number_of_objects         5
    set_scaling_to_map_size
 }
 
@@ -373,19 +360,21 @@ endif
 if SAVCA
 create_elevation        4
 {
-  base_terrain                SAVANNAH
-  number_of_clumps 		14
-  number_of_tiles 		2000
+  base_terrain                DLC_MANGROVESHALLOW
+  number_of_clumps 		20
+  number_of_tiles 		1200
   set_scale_by_groups
   set_scale_by_size           
+  clumping_factor     100
 }
 else
 create_elevation        4
 {
-  base_terrain                DIRT4
-  number_of_clumps 		14
-  number_of_tiles 		2000
+  base_terrain                DLC_MANGROVESHALLOW
+  number_of_clumps 		20
+  number_of_tiles 		1200
   set_scale_by_groups
-  set_scale_by_size           
+  set_scale_by_size      
+  clumping_factor     100     
 }
 endif

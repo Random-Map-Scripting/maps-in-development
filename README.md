@@ -4,7 +4,6 @@
 It's like Arena - except your walls are around the other player.
 
 👨‍🔧 To do: 
-* add straggler trees
 * move second goal inside walls
 * make a back gold?
 * fix neutral gold/stone locations
@@ -25,3 +24,5 @@ It's like Islands - but the opposite.
 👨‍🔧 To do: 
 * less fish?
 * look at player/pond starts? 
+
+---

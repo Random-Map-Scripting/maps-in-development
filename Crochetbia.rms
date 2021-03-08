@@ -1,0 +1,126 @@
+/* CROCHETBIA */
+
+<PLAYER_SETUP>
+random_placement
+ai_info_map_type ARABIA 0 0 0
+
+<LAND_GENERATION>
+base_terrain DIRT
+
+create_player_lands
+{
+    terrain_type                    DIRT
+    land_percent                    25
+    base_size                       9
+    border_fuzziness                15
+}
+
+<TERRAIN_GENERATION>
+/* BIG FOREST PATCH */
+create_terrain PALM_DESERT
+{
+    base_terrain                   DIRT
+    spacing_to_other_terrain_types 5
+    land_percent                   12
+    number_of_clumps               10
+    set_avoid_player_start_areas     
+    set_scale_by_groups
+}
+/* LAND PATCH 1 */
+create_terrain DESERT
+{
+    base_terrain                   DIRT
+    number_of_clumps               16
+    spacing_to_other_terrain_types 0
+    land_percent                   20
+    set_scale_by_size
+}
+/* LITTLE FOREST PATCH */
+create_terrain FOREST
+{
+  base_terrain                      DIRT
+  spacing_to_other_terrain_types    3
+  land_percent                      1
+  number_of_clumps                  3
+  set_avoid_player_start_areas     
+  set_scale_by_groups
+}
+/* LAND PATCH 2 */
+create_terrain DIRT3
+{
+    base_terrain                   DIRT
+    number_of_clumps               24
+    spacing_to_other_terrain_types 1
+    land_percent                   2
+    set_scale_by_size
+}
+/* LAND PATCH 3 */
+create_terrain GRASS3
+{
+    base_terrain                   DIRT
+    number_of_clumps               30
+    spacing_to_other_terrain_types 1
+    land_percent                   2
+    set_scale_by_size
+}
+/* OASES */
+create_terrain WATER
+{
+  base_terrain                   PALM_DESERT
+  spacing_to_other_terrain_types 1
+  land_percent                   1
+  number_of_clumps               8
+  set_avoid_player_start_areas
+  set_flat_terrain_only     
+  set_scale_by_groups
+}
+
+<ELEVATION_GENERATION>
+create_elevation 7
+{
+    base_terrain        DIRT
+    number_of_clumps    20
+    number_of_tiles     3000
+    set_scale_by_groups
+    set_scale_by_size
+}
+
+
+<OBJECTS_GENERATION>
+create_object TOWN_CENTER
+{
+  set_place_for_every_player
+  group_placement_radius     18
+  min_distance_to_players    0
+  max_distance_to_players    0
+}
+
+create_object VILLAGER
+{
+  set_place_for_every_player
+  min_distance_to_players       6
+  max_distance_to_players       6
+}
+
+create_object MONK
+{
+  number_of_objects             1
+  set_place_for_every_player
+  min_distance_to_players       7
+  max_distance_to_players       9
+}
+
+ create_object MONASTERY
+{
+  number_of_objects             1
+  set_place_for_every_player
+  min_distance_to_players       9
+  max_distance_to_players       11
+}
+
+create_object RELIC
+{
+   number_of_objects            8
+   min_distance_to_players     25
+   temp_min_distance_group_placement 20
+}

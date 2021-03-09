@@ -73,17 +73,6 @@ create_land
     border_fuzziness                 1
 }
 
-/* <TERRAIN_GENERATION>
-#const FUNGUS_ROAD 39
-create_terrain FUNGUS_ROAD
-{
-  land_percent 2
-  set_avoid_player_start_areas
-  base_terrain SNOW
-  spacing_to_other_terrain_types 1
-  number_of_clumps 30
-} */
-
 <OBJECTS_GENERATION>
 /* PLAYER 1 */
 create_object VILLAGER

@@ -9,7 +9,7 @@ base_terrain DLC_RAINFOREST
 /* MIDDLE */
 create_land
 {
-    terrain_type GRASS2
+    terrain_type SNOW
     land_position 50 50
     land_percent 55
     base_size                     10
@@ -22,6 +22,7 @@ create_land
 /* LAND 1 */
 create_land
 {
+    terrain_type SNOW
     land_percent 0
     land_position 25 25
     assign_to_player 1
@@ -32,6 +33,7 @@ create_land
 /* LAND 2 */
 create_land 
 {
+    terrain_type SNOW
     land_percent 0
     land_position 75 75
     assign_to_player 2
@@ -42,7 +44,7 @@ create_land
 /* LAND 3 */
 create_land
 {
-    terrain_type GRASS2
+    terrain_type SNOW
     land_percent 0
     land_position 25 25
     assign_to_player 2
@@ -58,7 +60,7 @@ create_land
 /* LAND 4 */
 create_land 
 {
-    terrain_type GRASS2
+    terrain_type SNOW
     land_position 75 75
     assign_to_player 1
     land_id 4
@@ -70,6 +72,17 @@ create_land
     bottom_border                    3
     border_fuzziness                 1
 }
+
+/* <TERRAIN_GENERATION>
+#const FUNGUS_ROAD 39
+create_terrain FUNGUS_ROAD
+{
+  land_percent 2
+  set_avoid_player_start_areas
+  base_terrain SNOW
+  spacing_to_other_terrain_types 1
+  number_of_clumps 30
+} */
 
 <OBJECTS_GENERATION>
 /* PLAYER 1 */
@@ -174,7 +187,7 @@ create_object SHEEP
    min_distance_to_players    1
    max_distance_to_players    2
 } 
-create_object SHEEP
+create_object DLC_GOAT
 {
    number_of_objects 2
    number_of_groups 2
@@ -186,7 +199,7 @@ create_object SHEEP
    avoid_forest_zone 2
 }
 
-create_object BOAR
+create_object DLC_ELEPHANT
 {
   number_of_objects          1
   set_loose_grouping
@@ -196,7 +209,7 @@ create_object BOAR
   max_distance_to_players    19
 }
 
-create_object BOAR
+create_object DLC_RHINO
 {
   number_of_objects           1
   set_gaia_object_only
@@ -205,7 +218,7 @@ create_object BOAR
   max_distance_to_players    19
 }
 
-create_object DEER
+create_object DLC_ZEBRA
 {
   number_of_objects          4
   group_placement_radius     3
@@ -315,7 +328,7 @@ create_object SHEEP
    min_distance_to_players    1
    max_distance_to_players    2
 } 
-create_object SHEEP
+create_object DLC_GOAT
 {
    number_of_objects 2
    number_of_groups 2
@@ -327,7 +340,7 @@ create_object SHEEP
    avoid_forest_zone 2
 }
 
-create_object BOAR
+create_object DLC_ELEPHANT
 {
   number_of_objects          1
   set_loose_grouping
@@ -337,7 +350,7 @@ create_object BOAR
   max_distance_to_players    19
 }
 
-create_object BOAR
+create_object DLC_RHINO
 {
   number_of_objects          1
   set_gaia_object_only
@@ -346,7 +359,7 @@ create_object BOAR
   max_distance_to_players    19
 }
 
-create_object DEER
+create_object DLC_ZEBRA
 {
   number_of_objects          4
   group_placement_radius     3
@@ -357,7 +370,7 @@ create_object DEER
   max_distance_to_players    17
 }
 
-create_object HAWK
+create_object MACAW
 {
    number_of_objects         4
    set_scaling_to_map_size
@@ -428,7 +441,7 @@ create_object STONE
   avoid_forest_zone 5
 }
 
-create_object WOLF
+create_object DLC_CROCODILE
 {
   number_of_objects          6
   set_gaia_object_only

@@ -55,16 +55,6 @@ create_terrain DLC_RAINFOREST
   set_scale_by_groups
 }
 
-{
-  base_terrain                   PALM_DESERT
-  spacing_to_other_terrain_types 1
-  land_percent                   1
-  number_of_clumps               8
-  set_avoid_player_start_areas
-  set_flat_terrain_only     
-  set_scale_by_groups
-}
-
 create_terrain WATER
 {
   base_terrain                   PALM_DESERT

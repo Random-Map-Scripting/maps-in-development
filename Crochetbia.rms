@@ -35,7 +35,7 @@ create_terrain FUNGUS_ROAD
   number_of_clumps 30
 }
 
-  create_terrain PALM_DESERT
+create_terrain PALM_DESERT
 {
   base_terrain                   SNOW
   spacing_to_other_terrain_types 5
@@ -71,7 +71,7 @@ create_terrain WATER
   base_terrain                   DLC_CRACKED
   spacing_to_other_terrain_types 1
   land_percent                   1
-  number_of_clumps               4
+  number_of_clumps               3
   set_avoid_player_start_areas
   set_flat_terrain_only     
   set_scale_by_groups
@@ -255,7 +255,6 @@ create_object MACAW
 }
 
 /* NEUTRAL RESOURCES */
-
 create_object GOLD
 {
   number_of_groups           4    
@@ -294,8 +293,17 @@ create_object GOLD
   group_placement_radius     2
   set_tight_grouping
   set_gaia_object_only
-  min_distance_to_players       40
-  min_distance_group_placement  9
+  /* min_distance_to_players       40
+  min_distance_group_placement  9 */
+  terrain_to_place_on DLC_CRACKED
+}
+create_object GOLD
+{
+  number_of_groups           1    
+  number_of_objects          2
+  group_placement_radius     2
+  set_tight_grouping
+  set_gaia_object_only
   terrain_to_place_on DLC_CRACKED
 }
 
@@ -303,6 +311,15 @@ create_object STONE
 {
   number_of_groups           1    
   number_of_objects          5
+  group_placement_radius     2
+  set_tight_grouping
+  set_gaia_object_only
+  terrain_to_place_on DLC_CRACKED
+}
+create_object STONE
+{
+  number_of_groups           1    
+  number_of_objects          2
   group_placement_radius     2
   set_tight_grouping
   set_gaia_object_only

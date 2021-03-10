@@ -15,7 +15,7 @@ It's like Arena - except your walls are around the other player.
 It's like Socratra - but boggier.
 
 👨‍🔧 To do: 
-- upload elevation changes
+- ~~upload elevation changes~~
 
 👩‍🔬 Needs testing
 
@@ -25,8 +25,25 @@ It's like Socratra - but boggier.
 It's like Islands - but the opposite. 
 
 👨‍🔧 To do: 
-- less fish?
+- ~~less fish?~~
 - look at player/pond starts? 
+
+👩‍🔬 Needs testing
+
+---
+
+## Crochetbia
+It's like Arabia - but with a monk. 
+
+👨‍🔧 To do: 
+
+👩‍🔬 Needs testing
+
+## Wipeout
+It's like Hideout - but with water in the middle. 
+
+👨‍🔧 To do: 
+- look at wood/huntables near base
 
 👩‍🔬 Needs testing
 

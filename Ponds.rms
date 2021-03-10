@@ -558,7 +558,6 @@ create_object MARLIN2
   set_gaia_object_only
   min_distance_group_placement        10
   max_distance_to_other_zones         7
-
 } 
 
 /* ************************************** */

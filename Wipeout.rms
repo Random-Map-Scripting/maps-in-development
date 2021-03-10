@@ -272,6 +272,7 @@ create_object MARLIN2
 } 
 
 /* FAR GOLD AND STONE */
+create GOLD
 {
 if TINY_MAP
      number_of_groups           2

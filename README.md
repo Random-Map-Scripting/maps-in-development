@@ -16,6 +16,7 @@ It's like Socratra - but boggier.
 
 👨‍🔧 To do: 
 - ~~upload elevation changes~~
+- adjust tree terrain/dockable areas
 
 👩‍🔬 Needs testing
 
@@ -39,8 +40,8 @@ It's like Arabia - but with a monk.
 
 👩‍🔬 Needs testing
 
-## Wipeout
-It's like Hideout - but with water in the middle. 
+## Tideout
+It's like Hideout - but with water. 
 
 👨‍🔧 To do: 
 - look at wood/huntables near base
@@ -52,4 +53,4 @@ It's like Hideout - but with water in the middle.
 🤷 Backburner:
 
 - test multiplayer, other map sizes
-- aesthetics
+- ~~aesthetics~~

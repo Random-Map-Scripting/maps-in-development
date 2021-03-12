@@ -77,30 +77,6 @@ endif
 
 #const MOORLAND 44
 
-#const ICE 26
-
-/* if SAVCA
-create_terrain ICE
-{
-  base_terrain                   ICE
-  land_percent                   3
-  number_of_clumps               10
-  set_scale_by_groups
-}
-endif
-
-if POUST
-create_terrain ICE
-{
-  base_terrain                   ICE
-  spacing_to_other_terrain_types 4
-  land_percent                   7
-  number_of_clumps               20
-  set_avoid_player_start_areas     
-  set_scale_by_groups
-}
-endif */
-
 <OBJECTS_GENERATION>
 create_object TOWN_CENTER
 {

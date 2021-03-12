@@ -5,23 +5,22 @@
 
 #const MEDITERRANEAN 20
 ai_info_map_type MEDITERRANEAN 0 0 0
-terrain_type GRASS2
 
 /* ****************************************************** */
 
 <LAND_GENERATION>
+base_terrain DLC_JUNGLEGRASS
+
 create_player_lands
 {
-  terrain_type                     DIRT
-  base_size                        15
+  terrain_type                    SNOW
+  base_size                         9
   land_percent                     7
   border_fuzziness                 7
   left_border                      7
   right_border                     7
   top_border                       7
   bottom_border                    7
-  other_zone_avoidance_distance    15
-  zone 3
 }
 
 /* PONDS */
@@ -34,7 +33,7 @@ create_land
   right_border                     5
   top_border                       5
   bottom_border                    5 
-  other_zone_avoidance_distance    7
+  other_zone_avoidance_distance    9
   zone 1
   set_avoid_player_start_areas
 }
@@ -48,7 +47,7 @@ create_land
   right_border                     5
   top_border                       5
   bottom_border                    5 
-  other_zone_avoidance_distance    7
+  other_zone_avoidance_distance    9
   zone 2
   set_avoid_player_start_areas
 }
@@ -107,7 +106,7 @@ if LARGE_MAP
 create_land 
 {
   if DESERT_MAP
-    terrain_type                     DIRT
+    terrain_type                     SNOW
   elseif ALPINE_MAP
     terrain_type                     GRASS2
   else                       
@@ -124,13 +123,8 @@ create_land
 }
 create_land 
 {
-  if DESERT_MAP
-    terrain_type                     DIRT
-  elseif ALPINE_MAP
-    terrain_type                     GRASS2
-  else                       
-    terrain_type                     GRASS
-  endif  
+  
+  terrain_type                     SNOW
   land_percent                     1
   border_fuzziness                 10
   other_zone_avoidance_distance    7
@@ -265,9 +259,9 @@ create_terrain DEEP_WATER
 }
 
 /* PRIMARY FOREST */
-create_terrain FOREST
+create_terrain DLC_RAINFOREST
 {
-  base_terrain                   GRASS
+  base_terrain                   DLC_JUNGLEGRASS
   spacing_to_other_terrain_types 4
   land_percent                   12
   number_of_clumps               15
@@ -276,9 +270,9 @@ create_terrain FOREST
 }
 
 /* PRIMARY PATCH */
-create_terrain DIRT
+create_terrain SNOW
 {
-  base_terrain                   GRASS
+  base_terrain                   SNOW
   number_of_clumps               10
   spacing_to_other_terrain_types 1
   land_percent                   2
@@ -286,9 +280,9 @@ create_terrain DIRT
 }
 
 /* SECONDARY PATCH */
-create_terrain GRASS3
+create_terrain SNOW
 {
-  base_terrain                   GRASS
+  base_terrain                  SNOW
   number_of_clumps               24
   spacing_to_other_terrain_types 1
   land_percent                   1
@@ -404,7 +398,7 @@ create_object SHEEP
    min_distance_to_players    5
    max_distance_to_players    8
 }
-create_object SHEEP
+create_object DLC_GOAT
 {
    number_of_groups 2
    number_of_objects 2
@@ -415,7 +409,7 @@ create_object SHEEP
    max_distance_to_players    24
 }
 
-create_object DEER
+create_object DLC_ZEBRA
 {
   number_of_objects          4
   group_variance             1
@@ -427,7 +421,7 @@ create_object DEER
   max_distance_to_players    30
 }
 
-create_object BOAR
+create_object DLC_RHINO
 {
   number_of_objects          1
   set_loose_grouping  
@@ -437,7 +431,7 @@ create_object BOAR
   max_distance_to_players    22
 }
 
-create_object BOAR
+create_object DLC_ELEPHANT
 {
   number_of_objects          1
   set_gaia_object_only
@@ -447,7 +441,7 @@ create_object BOAR
 }
 
 /* STRAGGLERS/STARTING WOODLINES (2) */
-create_object OAKTREE
+create_object DLC_RAINTREE
 {
   number_of_objects             2
   set_tight_grouping
@@ -457,7 +451,7 @@ create_object OAKTREE
   max_distance_to_players       5
   min_distance_group_placement  2
 }
-create_object OAKTREE
+create_object DLC_RAINTREE
 {
   number_of_objects             3
   set_gaia_object_only
@@ -466,7 +460,7 @@ create_object OAKTREE
   max_distance_to_players       8
   min_distance_group_placement  2
 }
-create_object OAKTREE
+create_object DLC_RAINTREE
 {
   number_of_objects             20
   number_of_groups              3
@@ -477,7 +471,7 @@ create_object OAKTREE
   min_distance_group_placement  8
 }
 
-create_object HAWK
+create_object MACAW
 {
    number_of_objects         6
    set_scaling_to_map_size
@@ -548,7 +542,7 @@ create_object SHORE_FISH
 
 create_object MARLIN1
 {
-  number_of_groups                    5
+  number_of_groups                    6
   number_of_objects                    1
   set_scaling_to_map_size
   set_gaia_object_only
@@ -558,13 +552,12 @@ create_object MARLIN1
 
 create_object MARLIN2
 {
-  number_of_groups                    5
+  number_of_groups                    6
   number_of_objects                    1
   set_scaling_to_map_size
   set_gaia_object_only
   min_distance_group_placement        10
   max_distance_to_other_zones         7
-
 } 
 
 /* ************************************** */
@@ -756,3 +749,13 @@ create_object GOLD
     place_on_specific_land_id 24
   }
 endif
+
+<ELEVATION_GENERATION>
+create_elevation        3
+  {         
+    base_terrain        SNOW
+    number_of_clumps 		30
+    number_of_tiles 		3000
+    set_scale_by_groups
+    set_scale_by_size           
+  }

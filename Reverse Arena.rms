@@ -73,6 +73,15 @@ create_land
     border_fuzziness                 1
 }
 
+<TERRAIN_GENERATION>
+create_terrain DLC_JUNGLEGRASS
+{
+  land_percent 10
+  set_avoid_player_start_areas
+  base_terrain SNOW
+  spacing_to_other_terrain_types 15
+}
+
 <OBJECTS_GENERATION>
 /* PLAYER 1 */
 create_object VILLAGER

@@ -33,7 +33,7 @@ create_land
   right_border                     5
   top_border                       5
   bottom_border                    5 
-  other_zone_avoidance_distance    9
+  other_zone_avoidance_distance    7
   zone 1
   set_avoid_player_start_areas
 }
@@ -47,7 +47,7 @@ create_land
   right_border                     5
   top_border                       5
   bottom_border                    5 
-  other_zone_avoidance_distance    9
+  other_zone_avoidance_distance    7
   zone 2
   set_avoid_player_start_areas
 }

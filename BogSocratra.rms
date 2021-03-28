@@ -140,7 +140,7 @@ create_object WATCH_TOWER
 }
 endif
 
-#const GOATEE 1060
+/* #const GOATEE 1060
 
 create_object GOATEE
 {
@@ -150,13 +150,13 @@ create_object GOATEE
    set_place_for_every_player
    min_distance_to_players    6
    max_distance_to_players    9
-}
+} */
 
 #const ZEBRA 1019
 
 create_object ZEBRA
 {
-  number_of_objects          4
+  number_of_objects          3
   group_placement_radius     3
   set_loose_grouping
   set_gaia_object_only
@@ -321,7 +321,6 @@ create_object MARLIN1
   number_of_groups                    10
   terrain_to_place_on SHALLOW
   number_of_objects                    1
-  set_scaling_to_map_size
   set_gaia_object_only
   min_distance_group_placement        3
 } 
@@ -331,7 +330,6 @@ create_object MARLIN2
   number_of_groups                     2
   set_place_for_every_player
   number_of_objects                    1
-  set_scaling_to_map_size
   set_gaia_object_only
   min_distance_group_placement        3
   min_distance_to_players             9
